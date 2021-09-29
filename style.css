@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #2f3134;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #6181ec;
+    color: #6181ec;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6181ec;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.user-card {
+    width: 500px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.user-card-img {
+    width: 5rem;
+    border: solid 1px #aaa;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.user-card-details {
+    flex-grow: 1;
+}
+
+.user-name {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.user-description {
+    color: #ccc;
+}

@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Petite Vue</title>
+        <title>Petite Vue Example</title>
         <script src="./app.js" type="module"></script>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./style.css" />
     </head>
 
     <body>
+        <!--  app template -->
         <template id="app-template">
             <div>
                 <ul>
-                    <li v-for="user in users">{{user.name}}</li>
+                    <li v-for="user in users">
+                        <div v-scope="UserCard(user)"></div>
+                    </li>
                 </ul>
+            </div>
+        </template>
+
+        <!-- user card template -->
+        <template id="user-template">
+            <div class="user-card">
+                <img
+                    :src="`https://avatars.dicebear.com/api/croodles/${user.name}.svg`"
+                    alt=""
+                    class="user-card-img"
+                />
+
+                <div class="user-card-details">
+                    <div class="user-name">{{user.name}}</div>
+
+                    <div class="user-description">
+                        <div>@{{user.username}}</div>
+                    </div>
+                </div>
+
+                <button @click="follow(user)">
+                    {{user.isFollowed ? 'Un Follow' : 'Follow' }}
+                </button>
             </div>
         </template>
 
