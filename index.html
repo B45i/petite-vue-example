@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Petite Vue</title>
+        <script src="./app.js" type="module"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <template id="app-template">
+            <div>
+                <ul>
+                    <li v-for="user in users">{{user.name}}</li>
+                </ul>
+            </div>
+        </template>
+
+        <!-- reuse it -->
+        <div v-scope="App()" @mounted="getUsers"></div>
+    </body>
+</html>
